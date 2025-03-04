@@ -1,0 +1,11 @@
+//https://www.geeksforgeeks.org/problems/middle-of-three2926/1
+
+// User function template for C++
+
+class Solution {
+  public:
+    int middle(int a, int b, int c) {
+        // code here
+        return a+b+c-max({a,b,c})-min({a,b,c});
+    }
+};
