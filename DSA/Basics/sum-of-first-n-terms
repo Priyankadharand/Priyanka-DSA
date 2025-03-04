@@ -1,0 +1,12 @@
+//https://www.geeksforgeeks.org/problems/sum-of-first-n-terms5843/1
+
+// User function template for C++
+
+class Solution {
+  public:
+    int sumOfSeries(int n) {
+        // code here
+        long long sum = (long long)n*(n+1)/2;
+        return sum*sum;
+    }
+};
