@@ -1,0 +1,19 @@
+//https://www.google.com/url?q=https://practice.geeksforgeeks.org/problems/count-digits5716/1&sa=D&source=editors&ust=1741073363266994&usg=AOvVaw26ifY2TJ-dEASF1An8ifOc
+
+class Solution {
+public:
+    int evenlyDivides(int n) {
+        int count = 0;
+        int temp = n;
+
+        while (temp > 0) {
+            int digit = temp % 10;  // Extract last digit
+            if (digit != 0 && n % digit == 0) {  
+                count++;  // Increment count if digit divides n
+            }
+            temp /= 10;  // Remove last digit
+        }
+
+        return count;
+    }
+};
