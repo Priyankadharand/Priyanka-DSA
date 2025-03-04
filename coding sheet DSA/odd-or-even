@@ -1,0 +1,19 @@
+//https://www.google.com/url?q=https://practice.geeksforgeeks.org/problems/odd-or-even3618/1&sa=D&source=editors&ust=1741073363266267&usg=AOvVaw0EqxxKQ3r5upb0vdh9Rh01
+
+class Solution {
+  public:
+    bool isEven(int n) {
+        return (n % 2== 0);
+    }
+    int main(){
+    int n;
+    cout <<"n: ";
+    cin >> n;
+    
+    if(isEven(n)) {
+        cout<<"true";
+    }else{
+        cout<<"false";
+    }
+    }
+};
