@@ -1,0 +1,35 @@
+//https://www.google.com/url?q=https://www.geeksforgeeks.org/problems/power-of-numbers-1587115620/1&sa=D&source=editors&ust=1741073363267705&usg=AOvVaw14kbwUych0aeCaRv1uOHu-
+
+class Solution {
+public:
+    const int MOD = 1e9 + 7;
+
+    // Function to reverse a number
+    long long reverseNumber(long long n) {
+        long long rev = 0;
+        while (n > 0) {
+            rev = rev * 10 + (n % 10);
+            n /= 10;
+        }
+        return rev;
+    }
+
+    // Function to calculate (base^exp) % MOD using modular exponentiation
+    long long power(long long base, long long exp, long long mod) {
+        long long result = 1;
+        while (exp > 0) {
+            if (exp % 2 == 1) {  // If exponent is odd
+                result = (result * base) % mod;
+            }
+            base = (base * base) % mod;
+            exp /= 2;
+        }
+        return result;
+    }
+
+    // Main function to compute power of the reverse
+    int reverseExponentiation(int n) {
+        long long rev = reverseNumber(n);
+        return power(n, rev, MOD);
+    }
+};
