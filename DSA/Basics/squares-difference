@@ -1,0 +1,14 @@
+//https://www.geeksforgeeks.org/problems/squares-difference0939/1
+
+// User function Template for C++
+class Solution {
+  public:
+    long long int squaresDiff(int N){
+        long long sumOfSquares = (N*(N+1)*(2*N+1))/6;
+        long long squareOfSum =(N*(N+1))/2;
+        squareOfSum *=squareOfSum;
+        
+        
+        return abs(sumOfSquares-squareOfSum);
+    }
+};
