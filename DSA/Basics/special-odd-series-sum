@@ -1,0 +1,9 @@
+//https://www.geeksforgeeks.org/problems/special-odd-series-sum1235/1
+
+// User function Template for C++
+class Solution {
+  public:
+    long long int sumOfTheSeries(long long int n){
+        return(n*(n+1)*(2*n+1))/6;
+    }
+};
