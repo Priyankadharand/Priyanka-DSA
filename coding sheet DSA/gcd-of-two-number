@@ -1,0 +1,14 @@
+//https://www.google.com/url?q=https://practice.geeksforgeeks.org/problems/gcd-of-two-numbers3459/1&sa=D&source=editors&ust=1741073363267986&usg=AOvVaw2BrN7frzmUPpIpydsjRuNX
+
+class Solution {
+public:
+    // Function to compute GCD using the Euclidean algorithm
+    int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+};
