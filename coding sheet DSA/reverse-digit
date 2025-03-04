@@ -1,0 +1,16 @@
+//https://www.google.com/url?q=https://www.geeksforgeeks.org/problems/reverse-digit0316/1&sa=D&source=editors&ust=1741073363267394&usg=AOvVaw3i0F-p4Di6isPSueXBQU7Y
+
+class Solution {
+public:
+    int reverseDigits(int n) {
+        int reversedNumber = 0;
+        
+        while (n > 0) {
+            int digit = n % 10; // Extract last digit
+            reversedNumber = reversedNumber * 10 + digit; 
+            n /= 10; 
+        }
+        
+        return reversedNumber;
+    }
+};
