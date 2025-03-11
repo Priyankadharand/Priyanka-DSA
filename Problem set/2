@@ -1,0 +1,17 @@
+https://www.geeksforgeeks.org/problems/perfect-arrays4645/1
+
+class Solution {
+  public:
+    bool isPerfect(vector<int> &arr) {
+        int n=arr.size();
+        for(int i=0;i<n/2;i++){
+            //compare first half with the second half in reverse
+            if(arr[i]!= arr[n-i-1]){
+                return false;
+                //if mismatch found, it's not a palindrome
+            }
+        }
+        return true;
+        //if no mismatches, it's a palindrome
+    }
+};
