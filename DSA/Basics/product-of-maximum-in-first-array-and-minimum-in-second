@@ -1,0 +1,52 @@
+https://www.geeksforgeeks.org/problems/product-of-maximum-in-first-array-and-minimum-in-second3943/0
+
+
+class Solution {
+  public:
+    // Function to find the maximum element from array a[] and
+    // the minimum element from array b[] and return their product.
+    long long find_multiplication(vector<int> &arr1, vector<int> &arr2) {
+        int n = arr1.size(), m = arr2.size();
+        long long maxx =
+            INT_MIN; // initializing the maximum element as minimum possible value
+        long long minn =
+            INT_MAX; // initializing the minimum element as maximum possible value
+
+        // finding the maximum element from array a[]
+        for (long long j = 0; j < n; j++) {
+            long long k = arr1[j];
+            if (k > maxx)
+                maxx = k;
+        }
+
+        // finding the minimum element from array b[]
+        for (long long j = 0; j < m; j++) {
+            long long k = arr2[j];
+            if (k < minn)
+                minn = k;
+        }
+
+        // returning the product of maximum and minimum elements
+        return (maxx * minn);
+    }
+};
+
+
+
+
+Another method
+class Solution {
+  public:
+    // Function to find the maximum element from array a[] and
+    // the minimum element from array b[] and return their product.
+    long long find_multiplication(vector<int> &arr1, vector<int> &arr2) {
+        //Find the maximum element in arr1
+        int max1=*max_element(arr1.begin(),arr1.end());
+        
+        //Find the minimum element in arr2
+        int min2=*min_element(arr2.begin(),arr2.end());
+        
+        //Return their product
+        return (long long)max1*min2;
+    }
+};
