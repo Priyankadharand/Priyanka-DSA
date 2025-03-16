@@ -1,0 +1,53 @@
+Given an array, print the sum or even values in the array.
+
+Example n = 5 arr = [2, 3, 5, 6, 8]
+
+Output: 16
+
+So here the even values are 2,6, 8. So sum of them is 16.
+
+Input Format
+
+n = 5 arr = [2, 3, 5, 6, 8]
+
+Constraints
+
+1<=n<=1000
+
+Output Format
+
+16
+
+Sample Input 0
+
+5
+1 2 3 4 5
+Sample Output 0
+
+6
+
+  ANSWER 
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n; // Read the size of the array
+
+    vector<int> arr(n);
+    int sum = 0;
+
+    // Read array elements
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+        if (arr[i] % 2 == 0) { // Check if the number is even
+            sum += arr[i]; // Add even numbers to the sum
+        }
+    }
+
+    cout << sum << endl; // Print the sum of even numbers
+    return 0;
+}
